@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Rohan</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header>
+      <a href="index.html" class="logo">Rohan</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="#" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <form onsubmit="sendEmail(event)" class="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope"></i> rohansawant.517@gmail.com</p>
+          <p>
+            <i class="fa-brands fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/rohan-sawant-876160257/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </p>
+          <p>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/2Rohan0" target="_blank">GitHub</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-user-graduate"></i>
+            <a
+              href="https://www.geeksforgeeks.org/user/rohansawgqkz/"
+              target="_blank"
+              >GeeksforGeeks</a
+            >
+          </p>
+          <p>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/rohansawant247/" target="_blank">Instagram</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script to handle mailto -->
+    <script>
+      function sendEmail(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent("Message from Portfolio");
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\n\n${message}`
+        );
+
+        window.location.href = `mailto:sawantrohan690@gmail.com?subject=${subject}&body=${body}`;
+      }
+    </script>
+  </body>
+</html>
