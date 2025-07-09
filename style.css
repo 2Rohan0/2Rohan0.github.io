@@ -55,6 +55,23 @@ nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
+
+
+.menu-icon {
+    display: none;
+    font-size: 2.8rem;
+    color: #b74b4b;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+
 @media(max-width:995px){
     nav{
         position: absolute;
@@ -193,19 +210,13 @@ span{
         border-left: 3px solid #b74b4b;
     }
 }@keyframes words {
-    0%, 20% {
+    0%, 30% {
         content: "Java Developer";
     }
-    21%, 40% {
-        content: "Backend Developer";
-    }
-    41%, 60% {
-        content: "Full Stack Developer";
-    }
-    61%, 80% {
+    31%, 60% {
         content: "Web Developer";
     }
-    81%, 100% {
+    61%, 100% {
         content: "Tech Enthusiast";
     }
 }
@@ -533,3 +544,4 @@ span{
     text-align: left;
   }
 }
+

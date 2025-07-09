@@ -25,6 +25,11 @@
         <a href="education.html">Education</a>
         <a href="#" class="active">Contact</a>
       </nav>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
     <!-- Contact Section -->
@@ -70,7 +75,9 @@
           </p>
           <p>
             <i class="fa-brands fa-instagram"></i>
-            <a href="https://www.instagram.com/rohansawant247/" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/rohansawant247/" target="_blank"
+              >Instagram</a
+            >
           </p>
         </div>
       </div>
@@ -91,6 +98,15 @@
 
         window.location.href = `mailto:sawantrohan690@gmail.com?subject=${subject}&body=${body}`;
       }
+    </script>
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+      const nav = document.querySelector("nav");
+
+      menuIcon.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
     </script>
   </body>
 </html>

@@ -20,6 +20,11 @@
         <a href="education.html">Education</a>
         <a href="contact.html">Contact</a>
       </nav>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
     <section class="projects" id="projects">
@@ -42,8 +47,8 @@
         <div class="project-card">
           <h3>Job Portal REST API Service</h3>
           <p>
-            Developed a RESTful backend using Java, Spring Boot and Spring Data JPA with PostgreSQL and tested
-            APIs via Postman.
+            Developed a RESTful backend using Java, Spring Boot and Spring Data
+            JPA with PostgreSQL and tested APIs via Postman.
           </p>
           <a
             href="https://github.com/2Rohan0/job-portal-rest-api"
@@ -82,5 +87,14 @@
         </div>
       </div>
     </section>
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+      const nav = document.querySelector("nav");
+
+      menuIcon.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
